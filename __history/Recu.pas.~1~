@@ -1,0 +1,30 @@
+unit Recu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, QuickRpt, QRCtrls, Vcl.ExtCtrls,DM;
+
+type
+  TFormReçu = class(TForm)
+    QuickRep1: TQuickRep;
+    PageHeaderBand1: TQRBand;
+    TitleBand1: TQRBand;
+    ColumnHeaderBand1: TQRBand;
+    DetailBand1: TQRBand;
+    PageFooterBand1: TQRBand;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormReçu: TFormReçu;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,51 @@
+unit Filiere;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls,DM;
+
+type
+  TForm_filiere = class(TForm)
+    Panel_filiere: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_filiere: TForm_filiere;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm_filiere.Button1Click(Sender: TObject);
+begin
+   with DataM.DM_ do
+  begin
+    open;
+    insert;
+    FieldByName('libelle').AsString := Edit3.Text;
+    FieldByName('Code_F').AsString :=Edit2.Text;
+    post;
+  end;
+    edit3.Clear   ;
+    edit2.Clear;
+
+end;
+
+end.

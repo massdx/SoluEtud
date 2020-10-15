@@ -1,0 +1,69 @@
+unit UnitAcceuil;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, pngimage, Menus, jpeg, Grids, DBGrids, DBCtrls, StdCtrls,
+  TeCanvas, TeeEdiGrad,unitformetud,unit1DM;
+
+type
+  TAcceuil = class(TForm)
+    Panelacceuil: TPanel;
+    Image2: TImage;
+    Image1: TImage;
+    Panel1recouvre: TPanel;
+    Panelpaye: TPanel;
+    Panelsolde: TPanel;
+    Image4: TImage;
+    Image3: TImage;
+    Image5: TImage;
+    ImageRech: TImage;
+    MainMenu1: TMainMenu;
+    Fichier1: TMenuItem;
+    Payementffctu1: TMenuItem;
+    Etudiants1: TMenuItem;
+    Filire1: TMenuItem;
+    Recouvrement1: TMenuItem;
+    Edit1: TMenuItem;
+    Etudiants2: TMenuItem;
+    Filires1: TMenuItem;
+    Recouvrement2: TMenuItem;
+    quitter1: TMenuItem;
+    N1: TMenuItem;
+    procedure quitter1Click(Sender: TObject);
+    procedure Etudiants2Click(Sender: TObject);
+    procedure ButtonGradient1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Acceuil: TAcceuil;
+
+implementation
+
+{$R *.dfm}
+
+procedure TAcceuil.ButtonGradient1Click(Sender: TObject);
+begin
+ formetud.Show;
+end;
+
+procedure TAcceuil.Etudiants2Click(Sender: TObject);
+begin
+TFormEtud.Show;
+end;
+
+procedure TAcceuil.quitter1Click(Sender: TObject);
+begin
+if MessageDlg('Voulez-vous quitter ?',mtConfirmation,[mbYes , mbNo],0)=mrYes then
+  begin
+    MessageDLG('Fèrmeture  de L application !',mtInformation,[ mbok ],0);
+    close;
+  end;
+end;
+
+end.

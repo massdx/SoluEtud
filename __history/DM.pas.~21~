@@ -1,0 +1,73 @@
+unit DM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.ODBC,
+  FireDAC.Phys.ODBCDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.Client, Data.DB,
+  FireDAC.Comp.DataSet, Data.Win.ADODB, System.ImageList, Vcl.ImgList,
+  Vcl.Controls;
+
+type
+  TDataM = class(TDataModule)
+    Connecion: TFDConnection;
+    DM_etud: TFDTable;
+    DS_etud: TDataSource;
+    DM_filiere: TFDTable;
+    DS_filiere: TDataSource;
+    filiere_suppr: TFDQuery;
+    Filiere_update: TFDQuery;
+    Etud_update: TFDQuery;
+    Etud_supp: TFDQuery;
+    DM_recouvr: TFDTable;
+    DS_recouvr: TDataSource;
+    Recouvr_supp: TFDQuery;
+    Recouvr_update: TFDQuery;
+    DM_paye: TFDTable;
+    DS_paye: TDataSource;
+    Payer_update: TFDQuery;
+    payer_suppr: TFDQuery;
+    DM_solde: TFDQuery;
+    DS_solde: TDataSource;
+    DM_consulte: TFDQuery;
+    DS_consulte: TDataSource;
+    ImageList: TImageList;
+    ImageList2: TImageList;
+    ImageList3: TImageList;
+    DM_etudNum_E: TFDAutoIncField;
+    DM_etudNom: TStringField;
+    DM_etudPrenom: TStringField;
+    DM_etudSexe: TStringField;
+    DM_etuddatnaisse: TDateField;
+    DM_etudAdresse: TStringField;
+    DM_etudTelephone: TIntegerField;
+    DM_etudCode_F: TStringField;
+    Dm_historique: TFDQuery;
+    DS_historique: TDataSource;
+    DM_etud_query: TFDQuery;
+    DS_query_etud: TDataSource;
+    DM_payeNum_E: TIntegerField;
+    DM_payeNum_R: TIntegerField;
+    DM_payedate_P: TDateField;
+    DM_payemontant: TIntegerField;
+    etud_list: TFDQuery;
+    DS_etud_list: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataM: TDataM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

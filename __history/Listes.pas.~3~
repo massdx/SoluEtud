@@ -1,0 +1,44 @@
+unit Listes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DM, Data.DB, Vcl.ExtCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ComCtrls, Vcl.StdCtrls;
+
+type
+  Tform_list = class(TForm)
+    PanelEtudiant: TPanel;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    Edit1: TEdit;
+    Button1: TButton;
+    PanelFiliere: TPanel;
+    Panel2: TPanel;
+    DBGrid2: TDBGrid;
+    PanelRecouvre: TPanel;
+    Panel4: TPanel;
+    DBGrid3: TDBGrid;
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  form_list: Tform_list;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tform_list.FormActivate(Sender: TObject);
+begin
+  panelEtudiant.Visible:= false;
+  panelfiliere.Visible := false;
+  panelRecouvre.Visible := false;
+end;
+
+end.

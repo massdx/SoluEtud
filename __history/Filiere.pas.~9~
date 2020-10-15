@@ -1,0 +1,125 @@
+unit Filiere;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls,DM;
+
+type
+  TForm_filiere = class(TForm)
+    Panel_filiere: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    code: TEdit;
+    libeller: TEdit;
+    Panel1: TPanel;
+    procedure Button1Click(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_filiere: TForm_filiere;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm_filiere.Button1Click(Sender: TObject);
+begin
+  if (code.Text <>'') and (libeller.Text<>'')
+  then
+  begin
+
+    with DataM.DM_filiere do
+    begin
+      open;
+      insert;
+      FieldByName('libelle').AsString := libeller.Text;
+      FieldByName('Code_F').AsString :=code.Text;
+      post;
+    end;
+      code.Clear   ;
+      libeller.Clear;
+      dataM.DM_filiere.Refresh;
+      ShowMessage('Filière enregistrer  ave success!') ;
+  end
+  else
+  ShowMessage('Veuillez Remplir le formulaire')  ;
+end;
+
+procedure TForm_filiere.Button2Click(Sender: TObject);
+begin
+  if (code.Text <>'') and (libeller.Text<>'')
+  then
+  begin
+         with DataM.filiere_suppr do
+      begin
+
+        ParamByName('F').AsString := DBGrid1.Fields[0].Value;
+        ExecSQL;
+
+      end;
+       DataM.DM_filiere.Refresh;
+        ShowMessage('Supprimer a avec success!');
+  end
+  else
+  ShowMessage('Une Erreur c est produit !!') ;
+end;
+
+procedure TForm_filiere.Button3Click(Sender: TObject);
+begin
+  if (code.Text <>'') and (libeller.Text<>'')
+  then
+  begin
+  with DataM.Filiere_update do
+    begin
+      ParamByName('F').AsString := Code.Text;
+      ParamByName('L').AsString := libeller.Text;
+      ParamByName('A').AsString := DBGrid1.Fields[0].value;
+      ExecSQL
+    end;
+    DataM.DM_filiere.Refresh;
+    code.Clear;
+    libeller.Clear;
+    ShowMessage('Modifier avec success!');
+
+  end
+  else
+  ShowMessage('Veuillez Remplir le formulaire');
+
+end;
+
+procedure TForm_filiere.Button4Click(Sender: TObject);
+begin
+      code.Clear   ;
+      libeller.Clear;
+end;
+
+procedure TForm_filiere.DBGrid1CellClick(Column: TColumn);
+begin
+  code.Text := DBGrid1.Fields[0].Value;
+  libeller.Text := DBGrid1.Fields[1].Value;
+end;
+
+procedure TForm_filiere.FormActivate(Sender: TObject);
+begin
+  code.Clear;
+  libeller.Clear;
+end;
+
+end.

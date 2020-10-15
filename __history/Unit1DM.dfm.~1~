@@ -1,0 +1,17 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 447
+  Width = 746
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\projects\Solu Et' +
+      'ude\bdd\bddscol.mdb;Mode=ReadWrite|Share Deny None;Persist Secur' +
+      'ity Info=False'
+    LoginPrompt = False
+    Mode = ADODB
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 304
+    Top = 80
+  end
+end

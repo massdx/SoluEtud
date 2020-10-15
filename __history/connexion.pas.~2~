@@ -1,0 +1,33 @@
+unit connexion;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm_connexion = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    login: TEdit;
+    mdp: TEdit;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Connexion: TButton;
+    Annuler: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_connexion: TForm_connexion;
+
+implementation
+
+{$R *.dfm}
+
+end.

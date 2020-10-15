@@ -1,0 +1,14 @@
+program Soluetude;
+
+uses
+  Forms,
+  UnitAcceuil in 'UnitAcceuil.pas' {Acceuil};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TAcceuil, Acceuil);
+  Application.Run;
+end.

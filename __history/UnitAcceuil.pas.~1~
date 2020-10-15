@@ -1,0 +1,24 @@
+unit UnitAcceuil;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TAcceuil = class(TForm)
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Acceuil: TAcceuil;
+
+implementation
+
+{$R *.dfm}
+
+end.

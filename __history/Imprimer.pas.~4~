@@ -1,0 +1,109 @@
+unit Imprimer;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DM, QRCtrls, QuickRpt, Vcl.ExtCtrls;
+
+type
+  TForm_print = class(TForm)
+    impression: TQuickRep;
+    TitleBand1: TQRBand;
+    DetailBand1: TQRBand;
+    QRLabel1: TQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    QRShape5: TQRShape;
+    QRShape6: TQRShape;
+    QRShape7: TQRShape;
+    QRShape8: TQRShape;
+    QRShape9: TQRShape;
+    QRShape10: TQRShape;
+    QRShape11: TQRShape;
+    QRShape12: TQRShape;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRShape13: TQRShape;
+    QRShape14: TQRShape;
+    QRLabel8: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRDBText7: TQRDBText;
+    Panel_Solde: TPanel;
+    Panel_etudiant: TPanel;
+    impression2: TQuickRep;
+    QRBand1: TQRBand;
+    QRLabel9: TQRLabel;
+    QRBand2: TQRBand;
+    PageHeaderBand1: TQRBand;
+    ColumnHeaderBand1: TQRBand;
+    PageFooterBand1: TQRBand;
+    QRShape16: TQRShape;
+    QRShape15: TQRShape;
+    QRLabel12: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRShape18: TQRShape;
+    QRLabel14: TQRLabel;
+    QRShape19: TQRShape;
+    QRLabel15: TQRLabel;
+    QRShape20: TQRShape;
+    QRShape17: TQRShape;
+    QRLabel16: TQRLabel;
+    QRShape21: TQRShape;
+    QRShape29: TQRShape;
+    QRShape30: TQRShape;
+    QRLabel17: TQRLabel;
+    QRLabel18: TQRLabel;
+    QRLabel19: TQRLabel;
+    QRLabel20: TQRLabel;
+    QRShape31: TQRShape;
+    QRLabel21: TQRLabel;
+    QRShape32: TQRShape;
+    QRLabel22: TQRLabel;
+    QRShape33: TQRShape;
+    QRShape34: TQRShape;
+    QRLabel23: TQRLabel;
+    QRShape35: TQRShape;
+    QRShape36: TQRShape;
+    QRShape38: TQRShape;
+    QRDBText8: TQRDBText;
+    QRShape22: TQRShape;
+    QRDBText9: TQRDBText;
+    QRShape23: TQRShape;
+    QRShape24: TQRShape;
+    QRDBText10: TQRDBText;
+    QRDBText11: TQRDBText;
+    QRDBText12: TQRDBText;
+    QRDBText13: TQRDBText;
+    QRDBText14: TQRDBText;
+    QRShape28: TQRShape;
+    QRShape27: TQRShape;
+    QRShape26: TQRShape;
+    QRShape37: TQRShape;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_print: TForm_print;
+
+implementation
+
+{$R *.dfm}
+
+end.

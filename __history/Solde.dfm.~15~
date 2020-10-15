@@ -1,0 +1,265 @@
+object FormSolde: TFormSolde
+  Left = 0
+  Top = 0
+  Caption = 'Solde '
+  ClientHeight = 480
+  ClientWidth = 840
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 67
+    Width = 73
+    Height = 22
+    Caption = 'Par Filiere'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 108
+    Width = 83
+    Height = 22
+    Caption = 'Par Montant'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 840
+    Height = 41
+    Align = alTop
+    Caption = 'Solde des Etudiants'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'HP Simplified'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 439
+    Width = 840
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object Button1: TButton
+      Left = 239
+      Top = 6
+      Width = 26
+      Height = 25
+      ImageIndex = 3
+      Images = DataM.ImageList
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 328
+      Top = 6
+      Width = 25
+      Height = 25
+      ImageIndex = 2
+      Images = DataM.ImageList
+      TabOrder = 1
+    end
+    object Button7: TButton
+      Left = 465
+      Top = 6
+      Width = 25
+      Height = 25
+      ImageIndex = 0
+      Images = DataM.ImageList
+      TabOrder = 2
+    end
+    object Button8: TButton
+      Left = 398
+      Top = 6
+      Width = 25
+      Height = 25
+      ImageIndex = 1
+      Images = DataM.ImageList
+      TabOrder = 3
+    end
+  end
+  object Button6: TButton
+    Left = 744
+    Top = 108
+    Width = 88
+    Height = 22
+    Caption = 'Imprimer'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = Button6Click
+  end
+  object Recherche: TButton
+    Left = 583
+    Top = 70
+    Width = 120
+    Height = 31
+    Caption = 'Recherche'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ImageIndex = 5
+    ImageMargins.Left = 5
+    ImageMargins.Right = 5
+    Images = DataM.ImageList3
+    ParentFont = False
+    TabOrder = 3
+    OnClick = RechercheClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 136
+    Width = 840
+    Height = 297
+    DataSource = DataM.DS_solde
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -16
+    TitleFont.Name = 'Trebuchet MS'
+    TitleFont.Style = [fsBold]
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Num_E'
+        Title.Alignment = taCenter
+        Title.Caption = 'N'#176
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nom'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nom'
+        Width = 115
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'prenom'
+        Title.Alignment = taCenter
+        Title.Caption = 'Prenom'
+        Width = 171
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'code_F'
+        Title.Alignment = taCenter
+        Title.Caption = 'Filiere'
+        Width = 124
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Montant'
+        Title.Alignment = taCenter
+        Width = 197
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'date_P'
+        Title.Alignment = taCenter
+        Title.Caption = 'Date payer'
+        Width = 123
+        Visible = True
+      end>
+  end
+  object Filiere: TDBLookupComboBox
+    Left = 128
+    Top = 69
+    Width = 161
+    Height = 30
+    Color = clGrayText
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    KeyField = 'Code_F'
+    ListField = 'Code_F'
+    ListSource = DataM.DS_filiere
+    ParentFont = False
+    TabOrder = 5
+    OnCloseUp = FiliereCloseUp
+  end
+  object nom: TEdit
+    Left = 319
+    Top = 71
+    Width = 258
+    Height = 28
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    TextHint = 'Nom...'
+    OnClick = nomClick
+  end
+  object Button3: TButton
+    Left = 717
+    Top = 71
+    Width = 75
+    Height = 31
+    Caption = 'Tous'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    OnClick = Button3Click
+  end
+  object montant: TEdit
+    Left = 128
+    Top = 105
+    Width = 161
+    Height = 25
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Trebuchet MS'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 8
+    TextHint = 'Votre montant...'
+  end
+end

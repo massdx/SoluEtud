@@ -1,0 +1,158 @@
+object Form_filiere: TForm_filiere
+  Left = 0
+  Top = 0
+  Caption = 'Fili'#232're'
+  ClientHeight = 340
+  ClientWidth = 738
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel_filiere: TPanel
+    Left = 0
+    Top = 0
+    Width = 738
+    Height = 340
+    Align = alClient
+    TabOrder = 0
+    ExplicitHeight = 406
+    object Label2: TLabel
+      Left = 43
+      Top = 69
+      Width = 32
+      Height = 23
+      Caption = 'Code'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clTeal
+      Font.Height = -16
+      Font.Name = 'HP Simplified'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 43
+      Top = 120
+      Width = 49
+      Height = 23
+      Caption = 'Lib'#233'ller'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clTeal
+      Font.Height = -16
+      Font.Name = 'HP Simplified'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DBGrid1: TDBGrid
+      Left = 392
+      Top = 1
+      Width = 345
+      Height = 338
+      Align = alRight
+      DataSource = DataM.DS_filiere
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = ANSI_CHARSET
+      TitleFont.Color = clTeal
+      TitleFont.Height = -16
+      TitleFont.Name = 'Times New Roman'
+      TitleFont.Style = []
+      OnCellClick = DBGrid1CellClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Code_F'
+          Title.Caption = 'Code fili'#232're'
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clTeal
+          Title.Font.Height = -16
+          Title.Font.Name = 'HP Simplified'
+          Title.Font.Style = [fsUnderline]
+          Width = 193
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'libelle'
+          Title.Caption = 'libell'#233' fili'#232're'
+          Title.Font.Charset = ANSI_CHARSET
+          Title.Font.Color = clTeal
+          Title.Font.Height = -16
+          Title.Font.Name = 'HP Simplified'
+          Title.Font.Style = [fsUnderline]
+          Width = 112
+          Visible = True
+        end>
+    end
+    object Button1: TButton
+      Left = 35
+      Top = 208
+      Width = 118
+      Height = 39
+      Caption = 'Ajouter'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 232
+      Top = 206
+      Width = 113
+      Height = 44
+      Caption = 'Supprimer'
+      TabOrder = 2
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 232
+      Top = 281
+      Width = 113
+      Height = 38
+      Caption = 'Modifier'
+      TabOrder = 3
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 35
+      Top = 280
+      Width = 118
+      Height = 39
+      Caption = 'Vid'#233
+      TabOrder = 4
+    end
+    object code: TEdit
+      Left = 160
+      Top = 69
+      Width = 169
+      Height = 27
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+    end
+    object libeller: TEdit
+      Left = 160
+      Top = 120
+      Width = 169
+      Height = 27
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
+  end
+end

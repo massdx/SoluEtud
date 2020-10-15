@@ -1,0 +1,34 @@
+unit histo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.DBCtrls,Dm;
+
+type
+  THistorique = class(TForm)
+    prenom: TEdit;
+    nom: TEdit;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    Button3: TButton;
+    Mois: TDBLookupComboBox;
+    Label1: TLabel;
+    Recherche: TButton;
+    Button6: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Historique: THistorique;
+
+implementation
+
+{$R *.dfm}
+
+end.

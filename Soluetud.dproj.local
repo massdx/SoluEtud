@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/06/17 00:27:38.000.861,=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 00:39:42.000.289,=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 01:16:19.000.275,=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/06/17 01:25:37.000.709,F:\projects\Solu Etude\Etudiant.pas=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/06/17 01:25:37.000.709,F:\projects\Solu Etude\Etudiant.dfm=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2020/06/17 01:25:46.000.901,F:\projects\Solu Etude\Acceuil.dfm=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/06/17 01:25:46.000.901,F:\projects\Solu Etude\Acceuil.pas=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 01:26:05.000.424,F:\projects\Solu Etude\Soluetud.dproj=C:\Users\processorhack\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/06/17 01:28:41.000.973,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 01:43:45.000.907,F:\projects\Solu Etude\DM.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/06/17 01:43:45.000.907,F:\projects\Solu Etude\DM.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 02:27:02.000.982,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/17 02:36:47.000.196,F:\projects\Solu Etude\Unit1.pas=F:\projects\Solu Etude\Filiere.pas</Transaction>
+    <Transaction>2020/06/17 02:36:47.000.196,F:\projects\Solu Etude\Unit1.dfm=F:\projects\Solu Etude\Filiere.dfm</Transaction>
+    <Transaction>2020/06/21 17:21:48.000.425,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/21 17:23:12.000.550,F:\projects\Solu Etude\Recouvrement.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/21 17:23:12.000.550,F:\projects\Solu Etude\Recouvrement.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/06/22 00:16:09.000.449,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/22 00:23:54.000.465,F:\projects\Solu Etude\progressbar.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/22 00:23:54.000.465,F:\projects\Solu Etude\progressbar.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/06/23 22:48:48.000.355,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/06/23 23:19:32.000.816,F:\projects\Solu Etude\Unit1.pas=F:\projects\Solu Etude\Listes.pas</Transaction>
+    <Transaction>2020/06/23 23:19:32.000.816,F:\projects\Solu Etude\Unit1.dfm=F:\projects\Solu Etude\Listes.dfm</Transaction>
+    <Transaction>2020/07/06 08:32:41.000.990,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/06 08:50:23.000.205,F:\projects\Solu Etude\Unit1.pas=F:\projects\Solu Etude\Solde.pas</Transaction>
+    <Transaction>2020/07/06 08:50:23.000.205,F:\projects\Solu Etude\Unit1.dfm=F:\projects\Solu Etude\Solde.dfm</Transaction>
+    <Transaction>2020/07/08 09:43:03.000.003,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/08 09:46:38.000.060,F:\projects\Solu Etude\Imprimer.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/08 09:46:38.000.060,F:\projects\Solu Etude\Imprimer.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/07/11 14:15:56.000.469,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/15 17:16:02.000.473,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/22 16:37:58.000.071,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/22 16:40:57.000.309,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/22 16:46:38.000.985,F:\projects\Solu Etude\imprimer2.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/07/22 16:46:38.000.985,F:\projects\Solu Etude\imprimer2.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/26 10:32:19.000.665,=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/26 11:06:15.000.956,F:\projects\Solu Etude\histo.pas=F:\projects\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/26 11:06:15.000.956,F:\projects\Solu Etude\histo.dfm=F:\projects\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/07/26 11:31:13.000.223,F:\projects\Solu Etude\historique.dfm=F:\projects\Solu Etude\histo.dfm</Transaction>
+    <Transaction>2020/07/26 11:31:13.000.223,F:\projects\Solu Etude\historique.pas=F:\projects\Solu Etude\histo.pas</Transaction>
+    <Transaction>2020/07/27 19:39:03.000.470,F:\projects\Solu Etude\Recu.pas=F:\projects\Solu Etude\imprimer2.pas</Transaction>
+    <Transaction>2020/07/27 19:39:03.000.470,F:\projects\Solu Etude\Recu.dfm=F:\projects\Solu Etude\imprimer2.dfm</Transaction>
+    <Transaction>2020/07/30 17:12:06.000.508,=C:\Users\processorhack\Desktop\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/07/30 17:32:42.000.068,C:\Users\processorhack\Desktop\Solu Etude\connexion.dfm=C:\Users\processorhack\Desktop\Solu Etude\Unit1.dfm</Transaction>
+    <Transaction>2020/07/30 17:32:42.000.068,C:\Users\processorhack\Desktop\Solu Etude\connexion.pas=C:\Users\processorhack\Desktop\Solu Etude\Unit1.pas</Transaction>
+    <Transaction>2020/09/06 06:16:10.000.677,F:\projects\Solu Etude\progressbar.pas=F:\projects\Solu Etude\utilisateur.pas</Transaction>
+    <Transaction>2020/09/06 06:16:10.000.677,F:\projects\Solu Etude\progressbar.dfm=F:\projects\Solu Etude\utilisateur.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

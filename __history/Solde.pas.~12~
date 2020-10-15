@@ -1,0 +1,150 @@
+unit Solde;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DM, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls,imprimer, Vcl.DBCtrls;
+
+type
+  TFormSolde = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Button6: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Recherche: TButton;
+    DBGrid1: TDBGrid;
+    Filiere: TDBLookupComboBox;
+    Label1: TLabel;
+    nom: TEdit;
+    Button3: TButton;
+    procedure RechercheClick(Sender: TObject);
+    procedure FiliereCloseUp(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure nomClick(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormSolde: TFormSolde;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormSolde.Button3Click(Sender: TObject);
+begin
+     with DataM.DM_solde do
+            begin
+                      active:= false;
+                      sql.Clear;
+                      sql.Add('  SELECT E.Num_E,E.nom,E.prenom,E.code_F,SUM(P.Montant) as Montant,P.date_P');
+                      sql.Add('FROM etudiants E , payer P')  ;
+                      sql.Add('WHERE  E.num_E = P.num_E')  ;
+                      sql.Add('ORDER BY P.date_P ASC;') ;
+                      open;
+                      active:= true;
+            end;
+
+end;
+
+procedure TFormSolde.Button6Click(Sender: TObject);
+begin
+  Form_print.qrsolde.Preview;
+end;
+
+procedure TFormSolde.FiliereCloseUp(Sender: TObject);
+begin
+if(filiere.Text<>'') then
+begin
+    with DataM.DM_solde do
+            begin
+                      active:= false;
+                      sql.Clear;
+                      sql.Add('  SELECT E.Num_E,E.nom,E.prenom,E.code_F,SUM(P.Montant) as Montant,P.date_P');
+                      sql.Add('FROM etudiants E , payer P')  ;
+                      sql.Add('WHERE  E.num_E = P.num_E and E.code_F=:F')  ;
+                      sql.Add('ORDER BY P.date_P ASC;') ;
+                      ParamByName('F').AsString:= Filiere.KeyValue;
+                      open;
+                      active:= true;
+            end;
+
+end;
+end;
+
+procedure TFormSolde.FormActivate(Sender: TObject);
+begin
+with dataM.DM_solde do
+begin
+
+  refresh;
+  close ;
+  open;
+end;
+
+end;
+
+procedure TFormSolde.nomClick(Sender: TObject);
+begin
+nom.Clear;
+end;
+
+procedure TFormSolde.RechercheClick(Sender: TObject);
+begin
+if (filiere.Text<>'') then
+  begin
+    if (nom.Text<>'' ) then
+    begin
+
+              with DataM.DM_solde do
+                    begin
+                              active:= false;
+                              sql.Clear;
+                              sql.Add('  SELECT E.Num_E,E.nom,E.prenom,E.code_F,SUM(P.Montant) as Montant,P.date_P');
+                              sql.Add('FROM etudiants E , payer P')  ;
+                              sql.Add('WHERE  E.num_E = P.num_E and E.code_F=:F and nom=:nom')  ;
+                              sql.Add('ORDER BY P.date_P ASC;') ;
+                              ParamByName('F').AsString:= Filiere.KeyValue;
+                              ParamByName('nom').AsString:= nom.text;
+                              open;
+                              active:= true;
+                    end;
+
+
+    end;
+  end
+else
+  begin
+
+           if (nom.Text<>'' ) then
+        begin
+               with DataM.DM_solde do
+                    begin
+                              active:= false;
+                              sql.Clear;
+                              sql.Add('  SELECT E.Num_E,E.nom,E.prenom,E.code_F,SUM(P.Montant) as Montant,P.date_P');
+                              sql.Add('FROM etudiants E , payer P')  ;
+                              sql.Add('WHERE  E.num_E = P.num_E and  and nom=:nom')  ;
+                              sql.Add('ORDER BY P.date_P ASC;') ;
+                              ParamByName('nom').AsString:= nom.text;
+                              open;
+                              active:= true;
+                    end;
+
+        end
+  end;
+
+
+end;
+
+end.

@@ -1,0 +1,16 @@
+program Soluetude;
+
+uses
+  Forms,
+  UnitAcceuil in 'UnitAcceuil.pas' {Acceuil},
+  Unit1DM in 'Unit1DM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TAcceuil, Acceuil);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.

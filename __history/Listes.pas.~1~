@@ -1,0 +1,38 @@
+unit Listes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DM, Data.DB, Vcl.ExtCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ComCtrls;
+
+type
+  Tform_list = class(TForm)
+    list: TPageControl;
+    Payement: TTabSheet;
+    Etudiants: TTabSheet;
+    Filière: TTabSheet;
+    Recouvrement: TTabSheet;
+    DBGrid1: TDBGrid;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    DBGrid2: TDBGrid;
+    Panel3: TPanel;
+    DBGrid3: TDBGrid;
+    Panel4: TPanel;
+    DBGrid4: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  form_list: Tform_list;
+
+implementation
+
+{$R *.dfm}
+
+end.
